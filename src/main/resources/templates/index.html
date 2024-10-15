@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+    <title>Text Submission</title>
+</head>
+<body>
+<h1>Enter your text below:</h1>
+<form action="/submit" method="post">
+    <textarea name="textField" rows="10" cols="50"></textarea><br><br>
+    <button type="submit">Submit</button>
+</form>
+
+<div th:if="${submittedText}">
+    <h2>You submitted:</h2>
+    <p th:text="${submittedText}"></p>
+</div>
+</body>
+</html>
